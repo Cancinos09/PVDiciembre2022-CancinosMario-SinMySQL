@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<header th:fragment="headerDocente" class="header">		
+				<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+					<div class="container-fluid">
+						<a class="navbar-brand  text-white h1" href="/usuario/home_docente" >Unju Virtual - Docente</a>
+						<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						 <div class="collapse navbar-collapse" id="navbarNav">
+						 	<ul class="navbar-nav">
+								<li class="nav-item dropdown">
+									<a href="/home" target=_blank class="nav-link dropdown-toggle  text-white" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+									Login
+									</a>
+									<ul class="dropdown-menu bg-dark"  aria-labelledby="navbarDropdownMenuLink">
+										<li>
+											<a class="dropdown-item text-white" href="/usuario/login">
+											Cerrar sesion
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="/usuario/usuario_lista" class="nav-link text-white">
+									Usuarios
+									</a>
+								</li>
+							<!-- <li>
+									<a href="/beneficios" class="nav-link">Preguntas</a>
+								</li>
+								<li>
+									<a href="/contacto" class="nav-link">Contáctanos</a>
+								</li> -->
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle  text-white" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+										Evaluaciones
+									</a>
+									<ul class="dropdown-menu bg-dark"  aria-labelledby="navbarDropdownMenuLink">
+										<li>
+											<a class="dropdown-item text-white" href="/docente/">
+											Registros
+											</a>
+										</li>
+										<li>
+											<a class="dropdown-item text-white" href="/pregunta/todas">
+											Todas las preguntas
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					 </div>
+				</nav>
+		</header>
+		
+		<header th:fragment="headerEstudiante" class="header">
+			<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+					<div class="container-fluid">
+						<a class="navbar-brand  text-white h1" href="/usuario/home_estudiante" >Unju Virtual - Estudiante</a>
+						<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						 <div class="collapse navbar-collapse" id="navbarNav">
+						 	<ul class="navbar-nav">
+								<li class="nav-item dropdown">
+									<a href="/home" target=_blank class="nav-link dropdown-toggle  text-white" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+									Login
+									</a>
+									<ul class="dropdown-menu bg-dark"  aria-labelledby="navbarDropdownMenuLink">
+										<li>
+											<a class="dropdown-item text-white" href="/usuario/login">
+											Cerrar sesion
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="" class="nav-link text-white">
+									Perfil
+									</a>
+								</li>
+							</ul>
+						</div>
+					 </div>
+				</nav>
+		</header>
+	</body>
+</html>

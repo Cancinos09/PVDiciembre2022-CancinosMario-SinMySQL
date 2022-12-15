@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>Home docente</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/5.1.3/css/bootstrap.min.css}">
+		<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+		<style type="text/css">
+			body{
+				background: rgb(60,147,237);
+				background: radial-gradient(circle, rgba(60,147,237,1) 27%, rgba(0,0,0,1) 100%);
+			}
+		</style>
+	</head>
+	<body>
+		<header th:replace="~{/layouts/header::headerDocente}"></header>
+		<!-- Aca hiciste un cambio inesperado broh con vh -->
+		<div class="container vh-100">
+			<div class="row columna">
+				<div class="col-4" >
+					<div class="card bg-dark text-white" style="width: 18rem;">
+						<img src="https://img.freepik.com/vector-premium/ilustracion-vector-icono-datos-informacion-personal-aislado-estilo-dibujos-animados-plano-usuario-o-perfil_183665-192.jpg?w=2000" class="card-img-top" alt="...">
+						<div class="card-body">
+					    	<h5 class="card-title">Usuarios</h5>
+					    	<p class="card-text">Esta seccion pertenece a la planilla de usuarios que están registrados en el sistema</p>
+					    	<a href="/usuario/usuario_lista" class="btn btn-primary">Click aquí</a>
+					  	</div>
+					</div>
+				</div>
+				<div class="col-4">
+					<div class="card bg-dark text-white" style="width: 18rem;">
+						<img src="https://i.pinimg.com/564x/aa/52/0f/aa520f52c6a1ee0e024c0fac2d6bcaf5.jpg" class="card-img-top" alt="...">
+						<div class="card-body">
+					    	<h5 class="card-title">Registro de Preguntas</h5>
+					    	<p class="card-text">Esta seccion redirige al historial de evaluaciones que los estudiantes registran</p>
+					    	<a href="#" class="btn btn-primary">Click aquí</a>
+					  	</div>
+					</div>
+				</div>
+				<div class="col-4">
+					<div class="card bg-dark text-white" style="width: 18rem;">
+						<img src="https://png.pngtree.com/png-clipart/20200422/ourlarge/pngtree-hand-drawn-cartoon-list-settlement-stationery-illustration-png-image_2191022.jpg" class="card-img-top" alt="...">
+						<div class="card-body">
+					    	<h5 class="card-title">Evaluaciones</h5>
+					    	<p class="card-text">Edicion de evaluaciones</p>
+					    	<a href="#" class="btn btn-primary">Click aquí</a>
+					  	</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer th:replace="~{/layouts/footer::footer}"></footer>
+		
+		
+		<script type="text/javascript" th:src="@{/webjars/jquery/3.6.0/jquery.min.js}"></script>
+		<script type="text/javascript" th:src="@{/webjars/popper.js/2.9.3/umd/popper.min.js}"></script>
+		<script type="text/javascript" th:src="@{/webjars/bootstrap/5.1.3/js/bootstrap.min.js}"></script>
+	</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>EditarPregunta</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/5.1.3/css/bootstrap.min.css}">
+		<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+		<style type="text/css">
+			body{
+				background: rgb(60,147,237);
+				background: radial-gradient(circle, rgba(60,147,237,1) 27%, rgba(0,0,0,1) 100%);
+			}
+		</style>
+	</head>
+	<body>
+	<header th:replace="~{/layouts/header::headerDocente}"></header>
+		<div class="container vh-100 w-50">
+			<div class="row">
+				<form action="/pregunta/modificar" th:object="${pregunta}" method="post">
+					<input type="hidden" th:field="*{codigo}">
+					<div class="row">
+						<input type="hidden" th:field="*{nivel}">
+					</div>
+					<div class="row mt-5">
+						<input type="text" class="form-control" id="inputEnunciado" th:field="*{enunciado}">
+						<div class="text-white bg-dark" th:if="${#fields.hasErrors('enunciado')}" th:errors="*{enunciado}"></div>
+					</div>
+					<div class="row">
+						<input type="radio" class="form-control" id="inputOpcion1">
+						<input type="text" class="form-control" id="inputOpcion1" th:field="*{opcion1}">
+						<div class="text-danger" th:if="${#fields.hasErrors('opcion1')}" th:errors="*{opcion1}"></div>
+					</div>
+					<div class="row">
+						<input type="radio" class="form-control" id="inputOpcion2">
+						<input type="text" class="form-control" id="inputOpcion2" th:field="*{opcion2}">
+						<div class="text-danger" th:if="${#fields.hasErrors('opcion2')}" th:errors="*{opcion2}"></div>
+					</div>
+					<div class="row">
+						<input type="radio" class="form-control" id="inputOpcion3">
+						<input type="text" class="form-control" id="inputOpcion3" th:field="*{opcion3}">
+						<div class="text-danger" th:if="${#fields.hasErrors('opcion3')}" th:errors="*{opcion3}"></div>
+					</div>
+					<div class="row">
+						<input type="radio" class="form-control" id="inputOpcion4">
+						<input type="text" class="form-control" id="inputOpcion4" th:field="*{opcion4}">
+						<div class="text-danger" th:if="${#fields.hasErrors('opcion4')}" th:errors="*{opcion4}"></div>
+					</div>
+					<div class="row bg-primary border">
+						<div class="col-3 btn btn-primary p-2">
+							<input type="radio"  id="opcion1" name="opcion" value="1" th:field="*{opcionCorrecta}">
+							<label for="opcion1" >Opcion1</label>
+						</div>
+						<div class="col-3  btn btn-primary p-2">
+							<input type="radio" class="btn btn-primary" id="opcion2" name="opcion" value="2" th:field="*{opcionCorrecta}">
+							<label for="opcion2">Opcion2</label>
+						</div>
+						<div class="col-3 btn btn-primary p-2">
+							<input type="radio" class="btn btn-primary" id="opcion3" name="opcion" value="3" th:field="*{opcionCorrecta}">
+							<label for="opcion3">Opcion3</label>
+						</div>
+						<div class="col-3 btn btn-primary p-2">
+							<input type="radio" class="btn btn-primary" id="opcion4" name="opcion" value="4" th:field="*{opcionCorrecta}">
+							<label for="opcion4">Opcion4</label>
+						</div>
+					</div>
+					<div class="d-grid gap-2 d-md-block m-2">
+						<button id="botonModificacion" type="submit" class="btn btn-warning">Cambiar</button>
+						<button id="botonRestablecer" type="reset" class="btn btn-danger">Restablecer</button>
+					</div>
+					
+				</form>
+			</div>
+		</div>
+		<footer th:replace="~{/layouts/footer::footer}"></footer>
+		
+		
+		<script type="text/javascript" th:src="@{/webjars/jquery/3.6.0/jquery.min.js}"></script>
+		<script type="text/javascript" th:src="@{/webjars/popper.js/2.9.3/umd/popper.min.js}"></script>
+		<script type="text/javascript" th:src="@{/webjars/bootstrap/5.1.3/js/bootstrap.min.js}"></script>
+	</body>
+</html>
